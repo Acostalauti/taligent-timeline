@@ -4,7 +4,7 @@ import re
 import os
 
 CSV_FILE = 'Taligent_Hitos_Historicos.xlsx - Hitos Taligent.csv'
-HTML_FILE = 'Taligent_Timeline_v2.html'
+HTML_FILE = 'index.html'
 
 def main():
     hitos_data = []
