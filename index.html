@@ -374,9 +374,46 @@ footer {
 footer strong { color: var(--orange); }
 
 @media (max-width: 600px) {
-  .stats-section { grid-template-columns: repeat(2,1fr); }
-  .topbar-badge  { display: none; }
-  .cards-grid    { grid-template-columns: 1fr; }
+  .page { padding: 1rem 0.5rem 2rem; }
+  .topbar-badge { display: none; }
+  .topbar-brand img { height: 30px !important; }
+  .topbar-title { font-size: 1.1rem; }
+  
+  /* Esconder 'Imprimir' y centrar tabs */
+  .actionbar { justify-content: center; }
+  .actionbar .action-btn { display: none; }
+  .actionbar .spacer { display: none; }
+  
+  /* Stats apilados y más chicos */
+  .stats-section { 
+    grid-template-columns: 1fr; 
+    gap: 0.8rem; 
+    padding: 1rem; 
+  }
+  .stat-item { display: flex; align-items: baseline; justify-content: center; gap: 8px; }
+  .stat-item strong { display: inline-block; font-size: 1.5rem; }
+  .stat-item span { font-size: 0.8rem; }
+  
+  /* Filtros scrolleables horizontalmente en vez de apilarse mal */
+  .filter-row { 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    padding-bottom: 0.8rem; 
+    scrollbar-width: none;
+  }
+  .filter-row::-webkit-scrollbar { display: none; }
+  .fpill { flex-shrink: 0; }
+  
+  /* Ajustes a header de seccion */
+  .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  
+  .cards-grid { grid-template-columns: 1fr; }
+  
+  /* Optimización visual del timeline vertical para ahorrar espacio */
+  .tl-year-col { width: 50px; }
+  .tl-content { padding: 0.5rem 0.2rem 1rem 0.5rem; }
+  .cat-label { font-size: 0.6rem; padding: 2px 6px; }
 }
 </style>
 </head>
